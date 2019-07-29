@@ -25,6 +25,8 @@ class Calculator extends Component {
     let prevOperator;
     let active = true;
 
+    // capture the input value and display as the user clicks on the buttons
+
     let value = char => {
       myArray.push(char);
       currentVal = myArray.join("");
@@ -32,6 +34,8 @@ class Calculator extends Component {
       finalNo[0] = Number.parseFloat(currentVal);
       finalNo[2] = Number.parseFloat(currentVal);
     };
+
+    // check and store the operator that is to be used for the calculation
 
     let calculation = par => {
       if (par === "add") {
@@ -58,6 +62,9 @@ class Calculator extends Component {
       }
     };
 
+    // function if the equal sign was click or and other operator as this
+    // acts in the same manner as clicking on the equal sign.
+
     let equal = () => {
       if (operator === "+") {
         result = finalNo[1] + finalNo[0];
@@ -78,17 +85,14 @@ class Calculator extends Component {
         } else if (prevOperator === "/") {
           result = finalNo[1] / (finalNo[2] / 100);
         } else if (prevOperator === "+") {
-          result = finalNo[1] += finalNo[2] / 100;
+          result = finalNo[1] * (finalNo[2] / 100) + finalNo[1];
         } else if (prevOperator === "-") {
-          result = finalNo[1] -= finalNo[2] / 100;
+          result = finalNo[1] - finalNo[1] * (finalNo[2] / 100);
         }
       }
 
       finalNo[1] = result;
       finalNo[0] = 0;
-      console.log(
-        "0 = " + finalNo[0] + "AND 1 =" + finalNo[1] + "AND 2 =" + finalNo[2]
-      );
       myArray = [];
       document.getElementById("screen").value = finalNo[1].toFixed(2);
     };

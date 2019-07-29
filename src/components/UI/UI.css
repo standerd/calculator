@@ -5,31 +5,42 @@
   padding: 10px;
   border-radius: 5px;
   height: 350px;
-  
 }
 
-.rowOne, .rowOther {
+.rowOther {
   display: flex;
   float: left;
   justify-content: space-between;
   width: 100%;
 }
 
-.rowOne button {
-  
-  background-color: darkgray;
- 
-  cursor: pointer;
-  outline: none;
+.rowOne {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .rowOther button:last-of-type {
-    background-color: darkgray;
-  }
+  background-color: darkgray;
+}
 
-.Calculator button {
+.rowOne button {
+  background-color: darkgray;
+}
+
+.rowOther button {
   width: 23%;
-  height: 30px;
+  height: 33px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.rowOne button {
+  width: 48%;
+  height: 33px;
   border-radius: 5px;
   margin-bottom: 20px;
   font-size: 1.1em;
@@ -44,4 +55,8 @@
   margin-bottom: 20px;
   text-align: right;
   font-size: 2em;
+}
+
+button:hover {
+  cursor: pointer;
 }

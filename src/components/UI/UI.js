@@ -7,10 +7,10 @@ const UI = props => {
       <input id="screen" type="text" onChange={props.value} value="0" />
       <br />
       <div className="rowOne">
-        <button onClick={props.openBracket}>(</button>
-        <button onClick={props.closeBracket}>)</button>
-        <button onClick={props.percentage}>%</button>
-        <button onClick={props.allClear}>AC</button>
+        <button className="allClear" onClick={props.allClear}>
+          AC
+        </button>
+        <button onClick={props.equals}>=</button>
       </div>
       <div className="rowOther">
         <button onClick={props.seven}>7</button>
@@ -33,7 +33,8 @@ const UI = props => {
       <div className="rowOther">
         <button onClick={props.zero}>0</button>
         <button onClick={props.stop}>.</button>
-        <button onClick={props.equals}>=</button>
+        <button onClick={props.percentage}>%</button>
+
         <button onClick={props.subtract}>&#10134;</button>
       </div>
     </div>
