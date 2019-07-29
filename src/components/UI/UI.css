@@ -1,0 +1,47 @@
+.Calculator {
+  width: 600px;
+  margin: 10px auto;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  height: 350px;
+  
+}
+
+.rowOne, .rowOther {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rowOne button {
+  
+  background-color: darkgray;
+ 
+  cursor: pointer;
+  outline: none;
+}
+
+.rowOther button:last-of-type {
+    background-color: darkgray;
+  }
+
+.Calculator button {
+  width: 23%;
+  height: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.Calculator input {
+  width: 99%;
+  height: 45px;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 2em;
+}
