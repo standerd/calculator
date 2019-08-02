@@ -2,6 +2,7 @@ import React from "react";
 import "./UI.css";
 
 const UI = props => {
+  // calculator user inerface, onClick values are passed from Calculator via props
   return (
     <div className="Calculator">
       <input id="screen" type="text" onChange={props.value} value="0" />

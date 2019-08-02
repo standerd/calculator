@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import UI from "../components/UI/UI";
+import UI from "../Containers/UI/UI";
 
 class Calculator extends Component {
   render() {
+    //calculator button values
     const buttons = {
       zero: 0,
       one: 1,
@@ -98,6 +99,7 @@ class Calculator extends Component {
     };
 
     return (
+      // UI Component call and set props for the button values.
       <UI
         zero={() => value(buttons.zero)}
         one={() => value(buttons.one)}
